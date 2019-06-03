@@ -1,0 +1,59 @@
+<div class="container">
+      <form #form="ngForm" (ngSubmit)="cadastrar(form)" class="col s12">
+          <h5>Cadastrar Produto</h5>
+          <div class="row">
+              <div class="input-field col s11">
+                <input [(ngModel)]="obj.name" 
+                      id="name" 
+                      type="text" 
+                      class="validate" 
+                      name="name"
+                      maxlength="50"
+                      required >
+                <label for="name">Nome do Produto:</label>
+              </div>
+            </div>
+
+            <div class="row">
+                <div class="input-field col s11">
+                  <input [(ngModel)]="obj.price"
+                        id="price" 
+                        type="text" 
+                        class="validate" 
+                        name="price"
+                        [dropSpecialCharacters]="false" mask="0000.00"
+                        riquired >
+                  <label for="price">Preço:</label>
+                </div>
+            </div>
+            
+            <div class="row">
+              <div class="input-field col s11">
+                <input [(ngModel)]="obj.sku"
+                      id="sku" 
+                      type="text" 
+                      class="validate" 
+                      name="sku"
+                      maxlength="15"
+                      mask="000000000"
+                      riquired>
+                <label for="sku">Sku:</label>
+              </div>
+
+            </div>
+            
+            <div class="row">
+              <div class="col s11">
+                  <button [disabled]="!form.form.valid"
+                      class="btn waves-effect waves-light right" 
+                      type="submit"  
+                      name="action">Salvar
+                      <i class="material-icons right">send</i>
+                    </button>
+              </div>
+            </div>
+
+      </form>
+</div>
+
+

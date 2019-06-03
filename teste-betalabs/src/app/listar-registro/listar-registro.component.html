@@ -1,0 +1,36 @@
+<div class="container">
+    <!--Botão novo registro-->
+    <a [routerLink]="['/novo']" class="btn-floating btn-large waves-effect waves-light right">
+      <i class="material-icons">add</i>
+    </a>
+      
+    <h5>Lista de Produto</h5> 
+    <!--Tabela de registros-->
+    <table>
+      <thead>
+        <tr>
+            <th>Id</th>
+            <th>Produto</th>
+            <th>Sku</th>
+            <th>Preço</th>
+            <th></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let data of dados">
+
+          <td>{{data.id}}</td>
+          <td>{{data.name}}</td>
+          <td>{{data.sku}}</td>
+          <td>{{data.price | currency:'BRL':true}}</td>
+          <td>
+              <a class="btn-floating btn-large waves-effect waves-light right" (click)="excluir(data.id)">
+                <i class="material-icons">delete_forever</i>
+              </a>
+          </td>
+
+        </tr>
+      </tbody>
+    </table>
+</div>
