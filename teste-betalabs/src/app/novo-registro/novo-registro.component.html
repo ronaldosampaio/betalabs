@@ -1,9 +1,12 @@
 <div class="container">
-      <form #form="ngForm" (ngSubmit)="cadastrar(form)" class="col s12">
-          <h5>Cadastrar Produto</h5>
+      <h5>{{title}}</h5>
+      <form #form="ngForm" (ngSubmit)="cadastrar(form)" class="card-panel col s12">
+          
           <div class="row">
               <div class="input-field col s11">
                 <input [(ngModel)]="obj.name" 
+                      autocomplete="on"
+                      name="name"
                       id="name" 
                       type="text" 
                       class="validate" 
@@ -17,7 +20,9 @@
             <div class="row">
                 <div class="input-field col s11">
                   <input [(ngModel)]="obj.price"
-                        id="price" 
+                        autocomplete="on"
+                        id="price"
+                        name="price" 
                         type="text" 
                         class="validate" 
                         name="price"
@@ -30,11 +35,11 @@
             <div class="row">
               <div class="input-field col s11">
                 <input [(ngModel)]="obj.sku"
-                      id="sku" 
-                      type="text" 
+                      autocomplete="on"
+                      id="sku"
+                      name="sku" 
+                      type="number"
                       class="validate" 
-                      name="sku"
-                      maxlength="15"
                       mask="000000000"
                       riquired>
                 <label for="sku">Sku:</label>
@@ -45,7 +50,7 @@
             <div class="row">
               <div class="col s11">
                   <button [disabled]="!form.form.valid"
-                      class="btn waves-effect waves-light right" 
+                      class="btn waves-effect waves-light right cyan" 
                       type="submit"  
                       name="action">Salvar
                       <i class="material-icons right">send</i>

@@ -1,0 +1,71 @@
+<div class="container">
+    <h5>{{title}}</h5>
+    <form #form="ngForm" (ngSubmit)="editar(form)" materialize class="card-panel col s12">
+        
+
+        <div class="row">
+            <div class="input-field col s1">
+              <input [(ngModel)]="produtoId.id"
+                    disabled
+                    id="id"
+                    name="id" 
+                    class="disabled">
+              <label [class.active]="produtoId.id" for="id">Id:</label>
+            </div>
+        </div>
+
+        <div class="row"> 
+            <div class="input-field col s11">
+              <input [(ngModel)]="produtoId.name"
+                    id="name" 
+                    type="text" 
+                    class="validate" 
+                    name="name"
+                    maxlength="50"
+                    autocomplete="off"
+                    required >
+              <label [class.active]="produtoId.name" for="name">Nome do Produto:</label>
+            </div>
+          </div>
+
+          <div class="row">
+              <div class="input-field col s11">
+                <input [(ngModel)]="produtoId.price"
+                      id="price"
+                      name="price" 
+                      type="text" 
+                      class="validate"
+                      autocomplete="off" 
+                      [dropSpecialCharacters]="false" 
+                      mask="0000.00">
+                <label [class.active]="produtoId.price" for="price">Preço:</label>
+              </div>
+          </div>
+          
+          <div class="row">
+            <div class="input-field col s11">
+              <input [(ngModel)]="produtoId.sku"
+                    id="sku"
+                    name="sku" 
+                    class="validate" 
+                    autocomplete="off"
+                    mask="000000000">
+              <label [class.active]="produtoId.sku" for="sku">Sku:</label>
+            </div>
+
+          </div>
+          
+          <div class="row">
+            <div class="col s11">
+                <button 
+                    class="btn waves-effect waves-light cyan right" 
+                    type="submit"  
+                    name="action">Salvar
+                    <i class="material-icons right">send</i>
+                  </button>
+            </div>
+          </div>
+
+    </form>
+</div>
+

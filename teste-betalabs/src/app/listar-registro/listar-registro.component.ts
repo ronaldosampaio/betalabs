@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ServicoService } from '../serviço/servico.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-listar-registro',
@@ -7,13 +8,14 @@ import { ServicoService } from '../serviço/servico.service';
   styleUrls: ['./listar-registro.component.css']
 })
 export class ListarRegistroComponent implements OnInit {
-
+  title = 'Lista de Produto';
    dados: any[]=[];
+   //produtoId: any[]=[];
 
-  constructor(private servico: ServicoService) { }
+  constructor(private servico: ServicoService, private router: Router) { }
 
   listar(){
-    this.servico.listarRegistro()
+     this.servico.listarRegistro()
                 .subscribe((res:any)=>{
                     this.dados = res;
                     console.log(this.dados);
@@ -23,8 +25,8 @@ export class ListarRegistroComponent implements OnInit {
                 }
   }
   excluir(id:number){
-    this.servico.deletarRegistro(id)
-                .subscribe(
+     this.servico.deletarRegistro(id)
+                 .subscribe(
                  success => {
                    alert("Mensagem excluida com sucesso!")
                  },
@@ -32,7 +34,7 @@ export class ListarRegistroComponent implements OnInit {
                    alert("Erro ao excluir Mensagem!" +error.message)
                  },
                  () => this.listar()         
-  );
+     );
   }
 
   ngOnInit() {

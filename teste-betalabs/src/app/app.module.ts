@@ -8,7 +8,8 @@ import { NovoRegistroComponent } from './novo-registro/novo-registro.component';
 import { ListarRegistroComponent } from './listar-registro/listar-registro.component';
 import { MenuComponent } from './menu/menu.component';
 import { HttpClientModule } from '@angular/common/http';
-import { NgxMaskModule } from 'ngx-mask'
+import { NgxMaskModule } from 'ngx-mask';
+import { EditarRegistroComponent } from './editar-registro/editar-registro.component'
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { NgxMaskModule } from 'ngx-mask'
     AppComponent,
     NovoRegistroComponent,
     ListarRegistroComponent,
-    MenuComponent
+    MenuComponent,
+    EditarRegistroComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,40 @@
+{
+  "produtos": [
+    {
+      "name": "Notebook Acer A515-51G-72DB",
+      "price": "2749.99",
+      "sku": "132620885",
+      "id": 2
+    },
+    {
+      "name": "Notebook Ideapad 320",
+      "price": "2599.99",
+      "sku": "133252826",
+      "id": 3
+    },
+    {
+      "name": "Notebook A515-51-51UX",
+      "price": "2198.99",
+      "sku": "133459747",
+      "id": 5
+    },
+    {
+      "id": 6,
+      "name": "Radio a pilha grande",
+      "price": "6545.45",
+      "sku": "133456789"
+    },
+    {
+      "id": 7,
+      "name": "Placa de video pc",
+      "price": "1234.12",
+      "sku": "123413412"
+    },
+    {
+      "name": "Celular samsung J7",
+      "price": "2927.27",
+      "sku": "416235415",
+      "id": 8
+    }
+  ]
+}

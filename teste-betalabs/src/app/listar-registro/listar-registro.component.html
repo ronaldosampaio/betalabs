@@ -1,19 +1,22 @@
-<div class="container">
+<div class="container col s12">
     <!--Botão novo registro-->
-    <a [routerLink]="['/novo']" class="btn-floating btn-large waves-effect waves-light right">
-      <i class="material-icons">add</i>
-    </a>
+    <div>
+         <a [routerLink]="['/novo']" class="btn-floating btn-large cyan pulse right">
+             <i class="material-icons">add</i>
+         </a>
+    </div>
       
-    <h5>Lista de Produto</h5> 
+    <h5>{{title}}</h5> 
     <!--Tabela de registros-->
-    <table>
+    <table class="card-panel highlight">
       <thead>
         <tr>
             <th>Id</th>
             <th>Produto</th>
             <th>Sku</th>
             <th>Preço</th>
-            <th></th>
+            <th>Excluir</th>
+            <th>Editar</th>
         </tr>
       </thead>
 
@@ -25,12 +28,29 @@
           <td>{{data.sku}}</td>
           <td>{{data.price | currency:'BRL':true}}</td>
           <td>
-              <a class="btn-floating btn-large waves-effect waves-light right" (click)="excluir(data.id)">
-                <i class="material-icons">delete_forever</i>
+              <a class="btn-floating cyan pulse" (click)="excluir(data.id)">
+                 <i class="material-icons">delete_forever</i>
               </a>
           </td>
+          <td>
+            <a [routerLink]="['/editar', data.id]" class="btn-floating cyan pulse">
+                 <i class="material-icons">edit</i>
+            </a>
+        </td>
 
         </tr>
       </tbody>
     </table>
+</div>
+
+<div class="container">
+  <ul class="pagination">
+      <li class="disabled"><a href="#!"><i class="material-icons">chevron_left</i></a></li>
+      <li class="active"><a href="#!">1</a></li>
+      <li class="waves-effect"><a href="#!">2</a></li>
+      <li class="waves-effect"><a href="#!">3</a></li>
+      <li class="waves-effect"><a href="#!">4</a></li>
+      <li class="waves-effect"><a href="#!">5</a></li>
+      <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+  </ul>
 </div>
