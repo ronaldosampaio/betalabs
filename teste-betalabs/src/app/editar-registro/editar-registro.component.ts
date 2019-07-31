@@ -25,7 +25,7 @@ export class EditarRegistroComponent implements OnInit {
            this.id = params['id'];//obter parametro id da url
 
            this.servico.getRegistroId(this.id).subscribe((data:any)=>{
-               this.produtoId = data; // obter id da url com os dado do unico id
+               this.produtoId = data; // obter id da url com os dados do unico id
                console.log(this.produtoId)
            });
       })

@@ -25,16 +25,28 @@
       "sku": "133456789"
     },
     {
-      "id": 7,
-      "name": "Placa de video pc",
-      "price": "1234.12",
-      "sku": "123413412"
-    },
-    {
       "name": "Celular samsung J7",
       "price": "2927.27",
       "sku": "416235415",
       "id": 8
+    },
+    {
+      "name": "Televisão 32 polegadas",
+      "price": "1234.13",
+      "sku": "578578585",
+      "id": 9
+    },
+    {
+      "name": "Ferro de passar roupa e madeira",
+      "price": "1234.12",
+      "sku": "413413412",
+      "id": 10
+    },
+    {
+      "id": 11,
+      "name": "Notebook Acer Aspire E 15",
+      "price": "4567.45",
+      "sku": "142634745"
     }
   ]
 }
